@@ -1,5 +1,6 @@
 'use strict';
 import {MyCanvas} from './my_canvas.js';
+import {ZZFX, zzfx} from './ZzFX.js'
 
 export class Game {
     constructor() {
@@ -22,12 +23,15 @@ export class Game {
 
         // Control
         // Move
-        // Collision
+        // -- Collision?
         // Draw (TODO method)
         this.myCanvas.clearRect();
         this.myCanvas.fillBackground();
-
-        if (this.step < 600 && false)
+        
+        if (this.step % 60 == 0) // FIXME remove (DEBUG)
+            // TODO sound bank
+            zzfx(...[,,9,,.21,.13,3,2.21,,,-226,.35,,.1,365,,,,.14,.02]); // Random 386
+        if (this.step < 600 && true)
             requestAnimationFrame((timestamp) => this.run(timestamp));
     }
 }
