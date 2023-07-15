@@ -10,7 +10,7 @@ export class GameObject {
         this.height = height;
 
         this.spriteSheet = new Image();
-        this.spriteSheet.src = "../sprites/daco.png";
+        this.spriteSheet.src = "https://www.pngkit.com/png/full/219-2198087_stardew-valley-png.png"; //FIXME path argument
     }
 
     // TODO class Drawing.drawRect
